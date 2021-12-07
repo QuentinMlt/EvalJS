@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    let exemple = "bonjour";
+    function NumberOfSearchLetter(str , searchLetter){
+        let strArray = Array.from(str);
+            var result = strArray.filter((letter) => (letter == searchLetter || letter == searchLetter.toUpperCase() || letter == searchLetter.toLowerCase() )).length
+            return result
+    }
+    
+    console.log(NumberOfSearchLetter(exemple, "o"))
+    console.log(NumberOfSearchLetter(exemple, "O"))
+    exemple = "hello les amis"
+    console.log(NumberOfSearchLetter(exemple, "o"))
+    console.log(NumberOfSearchLetter(exemple, "z"))
+    
+
+    </script>
+</body>
+</html>

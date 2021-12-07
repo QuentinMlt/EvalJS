@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    let tab1 = ['a','b'];
+    let tab2 = ['c', 'd'] ;
+    
+    function ArrayUnion(array1 , array2){
+        let array3 = array1.concat(array2);
+        let uniqueChars = array3.filter((c, index) => {
+            return array3.indexOf(c) == index;
+        });
+        return uniqueChars
+        }
+
+    let i = ArrayUnion(tab1, tab2)
+    console.log(i)
+
+    tab2 = ['a', 'd'] 
+    i = ArrayUnion(tab1, tab2)
+    console.log(i)
+
+    tab1 =  ['a','b','a']
+    tab2 = ['a', 'd' , 'b', 'a']
+    i = ArrayUnion(tab1, tab2)
+    console.log(i)
+    
+    </script>
+</body>
+</html>
